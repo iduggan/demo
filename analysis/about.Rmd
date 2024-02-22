@@ -7,4 +7,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+My name is Isabella Duggan and I began my graduate studies in Biology at Villanova University in the spring 2024 semester. I am working in the R.K. Wieder lab through a grant studying the impacts to peat bog habitat from oil sands development in Alberta, Canada. 

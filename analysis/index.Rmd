@@ -8,4 +8,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Welcome to my research website!
+
+Here I will post updates on my research as I progress through my masters program.
