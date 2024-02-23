@@ -11,3 +11,5 @@ editor_options:
 Welcome to my research website!
 
 Here I will post updates on my research as I progress through my masters program.
+
+Click on this [file:///Users/isabelladuggan/demo/docs/first_analysis.html](first-analysis.html) to see my results.
