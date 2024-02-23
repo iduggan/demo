@@ -5,6 +5,8 @@ navbar:
   left:
   - text: Home
     href: index.html
+  - text: Fake Data
+    href: first_analysis.html
   - text: About
     href: about.html
   - text: License

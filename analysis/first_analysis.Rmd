@@ -1,0 +1,40 @@
+---
+title: "first_analysis"
+output: html_document
+date: "2024-02-22"
+---
+
+## Sample Data Set: 
+> Average temperatures in Pennsylvania (by year) over the past 100 years:
+
+# Generate random numeric data
+numeric_data <- data.frame(
+  Year = 1924:2024,
+  Temperature = runif(101, min = 40, max = 80) # Generates 101 random numbers between 40 and 80
+)
+
+# Display the entire dataset as a table
+print(numeric_data)
+
+write.csv(numeric_data, file = "numeric_data.csv", row.names = FALSE)
+
+# Filter data for last 10 years
+last_10_years <- subset(numeric_data, Year >= 2014 & Year <= 2024)
+
+
+### Create bar graph
+```{r}
+# Create bar graph
+barplot(last_10_years$Temperature, 
+        names.arg = last_10_years$Year,
+        xlab = "Year",
+        ylab = "Average Temperature (Fahrenheit)",
+        main = "Average Annual Temperature in Pennsylvania (2014-2024)",
+        ylim = c(40, 80), # Set the y-axis limits to match the range of temperatures
+        col = "skyblue", # Set bar color
+        border = NA, # Remove border of bars
+        space = 0.5, # Adjust spacing between bars
+        cex.names = 0.6) # Adjust font size of year labels
+
+```
+
