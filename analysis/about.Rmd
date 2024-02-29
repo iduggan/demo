@@ -7,4 +7,8 @@ editor_options:
   chunk_output_type: console
 ---
 
-My name is Isabella Duggan and I began my graduate studies in Biology at Villanova University in the spring 2024 semester. I am working in the R.K. Wieder lab through a grant studying the impacts to peat bog habitat from oil sands development in Alberta, Canada. 
+About Me:
+
+My name is Isabella Duggan and I am currently completing my Master's of Science in Biology at Villanova University, and working as a research assistant in the R.K. Wieder lab.
+
+I completed my undergraduate studies in May of 2022 from Eastern University in St. David's, Pennsylvania with my BS in Environmental Science and a minor in Political Science. While completing my undergraduate degree in an accelerated program, I worked part-time for Pennsylvania Sea Grant on their science communications team which I continued in a full-time capacity upon graduation, a role I worked in up until beginning my graduate studies.
