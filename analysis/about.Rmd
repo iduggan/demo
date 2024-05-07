@@ -6,15 +6,15 @@ date: "2024-03-18"
    
 #About Me
 
-My name is Isabella Duggan and I am currently completing my     Masters of Science in Biology at Villanova University, and     working as a research assistant in the [R.K. Wieder lab.](https://rwieder.clasit.org/research/)
+My name is Isabella Duggan and I am currently completing my     Masters of Science in Biology at Villanova University, and working as a research assistant in the [R.K. Wieder lab.](https://rwieder.clasit.org/research/)
 
-<img src="assets/bella_grad.jpg" alt="2022 graduation photo of me at Eastern University" width="580" height="750">
+<img src="assets/bella_grad.png" alt="2022 graduation photo of me at Eastern University" width="580" height="750">
 
 I completed my undergraduate studies in May of 2022, graduating from Eastern University in St. David's, PA with my BS in Environmental Science and a minor in Political Science. 
 
 During my undergraduate studies I worked part-time for Pennsylvania Sea Grant on their science communications team and on research at Eastern, studying the impacts to planarian regeneration ability and development after ingesting microplastics. 
 
-<img src="assets/IMG_6227.jpg" alt="photo of me working with planaria in Eastern University lab" width="440" height="570">
+<img src="assets/IMG_6227.png" alt="photo of me working with planaria in Eastern University lab" width="440" height="570">
 
 After graduating in 2022 I continued working with Pennsylvania Sea Grant as a Science Communications fellow. In my time with Sea Grant I worked with education, research, and outreach staff, and helped create their new website: [Pennsylvania Sea Grant Website](https://seagrant.psu.edu/). I look forward to returning to the research environment through my Masters studies. 
 
