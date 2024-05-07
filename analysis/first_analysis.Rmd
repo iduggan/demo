@@ -39,6 +39,8 @@ barplot(last_10_years$Temperature,
 
 ##The following graphs are using previous years of peatland data
 
+> C, N, S concentration (mg/g) in Everniam plant tissue from five plots at the Kearl site in the summer of 2018 and 2019.
+
 ```{r}
 
 # Load libraries
@@ -58,7 +60,7 @@ Carbon_2018_data$month <- as.numeric(Carbon_2018_data$month)
 ggplot(data = Carbon_2018_data, aes(x = month, y = Concentration)) +
   geom_line(color = "#1F77B4", size = 1) +  # Add a line
   geom_point(color = "#1F77B4", size = 3) +  # Add points
-  ggtitle("Carbon (C) Concentration in Everiam Plant Tissue in the Summer of 2018") +
+  ggtitle("Carbon (C) Concentration: Summer 2018") +
   ylab("C Concentration (mg/g)") +
   xlab("Month") +
   theme_minimal() +
@@ -88,7 +90,7 @@ library(ggplot2)
 # Create bar graph with modified aesthetic
 ggplot(data = avg_c_year, aes(x = year, y = average, fill = year)) + 
   geom_bar(stat = "identity", color = "white", width = 0.5) +  # Adjust width and remove outline
-  ggtitle("Average Carbon (C) Concentration in Everiam Plant Tissue Across Five Plots") +
+  ggtitle("Average Carbon (C) Concentration: 2018 v. 2019") +
   ylab("C Concentration (mg/g)") +
   xlab("Year") +
   scale_fill_manual(values = c("#1F77B4", "#1F77B4")) +  # Set bars to the same blue color
@@ -106,7 +108,7 @@ ggplot(data = avg_c_year, aes(x = year, y = average, fill = year)) +
 
 ```
 
-> Comparing average concentrations of carbon found in everiam plant tissue at the same site (Kearl) in 2018 versus 2019.
+> Comparing average concentrations of carbon found in everniam plant tissue at the same site (Kearl) in 2018 versus 2019.
 
 ```{r}
 
@@ -128,7 +130,7 @@ avg_CNS_year_long <- pivot_longer(avg_CNS_year, cols = c(C, N, S), names_to = "E
 # Create bar graph with modern aesthetic
 ggplot(avg_CNS_year_long, aes(x = year, y = Value, fill = Element)) +
   geom_bar(stat = "identity", position = "dodge", color = "white", width = 0.7) +
-  labs(title = "Average Concentrations of C, N, and S Over Years",
+  labs(title = "Average C, N, and S Concentrations: 2018 v. 2019",
        x = "Year",
        y = "Concentration (mg/g)") +
   scale_fill_manual(values = c("C" = "#1F77B4", "N" = "#2CA02C", "S" = "#FF7F0E"),
@@ -146,9 +148,8 @@ ggplot(avg_CNS_year_long, aes(x = year, y = Value, fill = Element)) +
     plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
   )
 
-
 ```
-> Average concentrations of C, N, and S in Everiam plant tissue in Kearl Canada in 2018 and 2019
+> Average concentrations of C, N, and S in Everniam plant tissue in Kearl Canada in 2018 and 2019
 
 ```{r}
 
@@ -162,7 +163,7 @@ my_colors <- c("N" = "#2CA02C", "S" = "#FF7F0E")
 ggplot(avg_CNS_year_long[avg_CNS_year_long$Element %in% c("N", "S"), ], 
        aes(x = year, y = Value, fill = Element)) +
   geom_bar(stat = "identity", position = "dodge", color = "white", width = 0.7) +
-  ggtitle("Average Concentrations of N and S Over Years") +
+  ggtitle("Average N and S Concentration: 2018 v. 2019") +
   ylab("Concentration") +
   xlab("Year") +
   scale_fill_manual(values = my_colors, name = "Element") +
@@ -180,7 +181,7 @@ ggplot(avg_CNS_year_long[avg_CNS_year_long$Element %in% c("N", "S"), ],
   )
 
 ```
-> A closer look at N and S concentration in Everiam plant tissue in 2018 and 2019
+> A closer look at N and S concentration in Everniam plant tissue in 2018 and 2019
 
 ```{r}
 # Load libraries
@@ -201,7 +202,7 @@ N_S_data$month <- as.numeric(N_S_data$month)
 ggplot(data = N_S_data, aes(x = month)) +
   geom_line(aes(y = N_Concentration, color = "N"), size = 1) +
   geom_line(aes(y = S_Concentration, color = "S"), size = 1) +
-  ggtitle("Average Concentrations of N and S over summer of 2018") +
+  ggtitle("Average N and S Concentration: Summer 2018") +
   ylab("Concentration (mg/g)") +
   xlab("Month") +
   scale_color_manual(name = "Element", values = c(N = "#2CA02C", S = "#FF7F0E")) +  # Set custom colors

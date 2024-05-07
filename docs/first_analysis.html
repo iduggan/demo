@@ -429,10 +429,10 @@ changes </a>
 <div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has staged changes. To know which version of the
-R Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
 <code>wflow_publish</code> to commit the R Markdown file and build the
 HTML.</p>
 </div>
@@ -525,15 +525,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreef05ca00b42b1ffb727066293cce713c6fce51c6ftargetblankf05ca00a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotree9d6a09b586e14d1f1ddb99d8e113375260bdddd4targetblank9d6a09ba">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/iduggan/demo/tree/f05ca00b42b1ffb727066293cce713c6fce51c6f" target="_blank">f05ca00</a>
+<a href="https://github.com/iduggan/demo/tree/9d6a09b586e14d1f1ddb99d8e113375260bdddd4" target="_blank">9d6a09b</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreef05ca00b42b1ffb727066293cce713c6fce51c6ftargetblankf05ca00a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotree9d6a09b586e14d1f1ddb99d8e113375260bdddd4targetblank9d6a09ba"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -543,7 +543,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/iduggan/demo/tree/f05ca00b42b1ffb727066293cce713c6fce51c6f" target="_blank">f05ca00</a>.
+<a href="https://github.com/iduggan/demo/tree/9d6a09b586e14d1f1ddb99d8e113375260bdddd4" target="_blank">9d6a09b</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -562,21 +562,7 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  analysis/carbon_2018_data.csv
-    Untracked:  output/averagebyyear.png
-    Untracked:  output/carbonconcentration2018.png
-
 Unstaged changes:
-    Modified:   analysis/_site.yml
-    Modified:   analysis/about.Rmd
-    Modified:   analysis/first_analysis.Rmd
-    Modified:   analysis/index.Rmd
-    Modified:   analysis/last_10_years.csv
-    Modified:   analysis/numeric_data.csv
-
-Staged changes:
-    Modified:   analysis/about.Rmd
     Modified:   analysis/first_analysis.Rmd
 
 </code></pre>
@@ -623,6 +609,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/analysis/first_analysis.Rmd" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+<td>
+updates to site
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/iduggan/demo/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/docs/first_analysis.html" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+<td>
+updates to site
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -795,6 +815,10 @@ accurate</strong> to actual annual temperatures in Pennsylvania,
 practice making bar charts</p>
 </blockquote>
 <p>##The following graphs are using previous years of peatland data</p>
+<blockquote>
+<p>C, N, S concentration (mg/g) in Everniam plant tissue from five plots
+at the Kearl site in the summer of 2018 and 2019.</p>
+</blockquote>
 <pre class="r"><code># Load libraries
 library(ggplot2)
 library(dplyr)</code></pre>
@@ -819,7 +843,7 @@ Carbon_2018_data$month &lt;- as.numeric(Carbon_2018_data$month)
 ggplot(data = Carbon_2018_data, aes(x = month, y = Concentration)) +
   geom_line(color = &quot;#1F77B4&quot;, size = 1) +  # Add a line
   geom_point(color = &quot;#1F77B4&quot;, size = 3) +  # Add points
-  ggtitle(&quot;Carbon (C) Concentration in Everiam Plant Tissue in the Summer of 2018&quot;) +
+  ggtitle(&quot;Carbon (C) Concentration: Summer 2018&quot;) +
   ylab(&quot;C Concentration (mg/g)&quot;) +
   xlab(&quot;Month&quot;) +
   theme_minimal() +
@@ -837,6 +861,43 @@ This warning is displayed once every 8 hours.
 Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
 generated.</code></pre>
 <p><img src="figure/first_analysis.Rmd/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-2-1">
+Past versions of unnamed-chunk-2-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/docs/figure/first_analysis.Rmd/unnamed-chunk-2-1.png" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <blockquote>
 <p>Chart displays concentrations of C found in everiam plant tissue at
 one site (Kearl) over 3 months in the summer of 2018.</p>
@@ -854,7 +915,7 @@ library(ggplot2)
 # Create bar graph with modified aesthetic
 ggplot(data = avg_c_year, aes(x = year, y = average, fill = year)) + 
   geom_bar(stat = &quot;identity&quot;, color = &quot;white&quot;, width = 0.5) +  # Adjust width and remove outline
-  ggtitle(&quot;Average Carbon (C) Concentration in Everiam Plant Tissue Across Five Plots&quot;) +
+  ggtitle(&quot;Average Carbon (C) Concentration: 2018 v. 2019&quot;) +
   ylab(&quot;C Concentration (mg/g)&quot;) +
   xlab(&quot;Year&quot;) +
   scale_fill_manual(values = c(&quot;#1F77B4&quot;, &quot;#1F77B4&quot;)) +  # Set bars to the same blue color
@@ -869,8 +930,45 @@ ggplot(data = avg_c_year, aes(x = year, y = average, fill = year)) +
     plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
   )</code></pre>
 <p><img src="figure/first_analysis.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/docs/figure/first_analysis.Rmd/unnamed-chunk-3-1.png" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <blockquote>
-<p>Comparing average concentrations of carbon found in everiam plant
+<p>Comparing average concentrations of carbon found in everniam plant
 tissue at the same site (Kearl) in 2018 versus 2019.</p>
 </blockquote>
 <pre class="r"><code># Load libraries
@@ -891,7 +989,7 @@ avg_CNS_year_long &lt;- pivot_longer(avg_CNS_year, cols = c(C, N, S), names_to =
 # Create bar graph with modern aesthetic
 ggplot(avg_CNS_year_long, aes(x = year, y = Value, fill = Element)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, color = &quot;white&quot;, width = 0.7) +
-  labs(title = &quot;Average Concentrations of C, N, and S Over Years&quot;,
+  labs(title = &quot;Average C, N, and S Concentrations: 2018 v. 2019&quot;,
        x = &quot;Year&quot;,
        y = &quot;Concentration (mg/g)&quot;) +
   scale_fill_manual(values = c(&quot;C&quot; = &quot;#1F77B4&quot;, &quot;N&quot; = &quot;#2CA02C&quot;, &quot;S&quot; = &quot;#FF7F0E&quot;),
@@ -908,9 +1006,48 @@ ggplot(avg_CNS_year_long, aes(x = year, y = Value, fill = Element)) +
     legend.text = element_text(size = 10),
     plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
   )</code></pre>
-<p><img src="figure/first_analysis.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
-&gt; Average concentrations of C, N, and S in Everiam plant tissue in
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-1">
+Past versions of unnamed-chunk-4-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-4-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/docs/figure/first_analysis.Rmd/unnamed-chunk-4-1.png" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote>
+<p>Average concentrations of C, N, and S in Everniam plant tissue in
 Kearl Canada in 2018 and 2019</p>
+</blockquote>
 <pre class="r"><code># Load libraries
 library(ggplot2)
 
@@ -921,7 +1058,7 @@ my_colors &lt;- c(&quot;N&quot; = &quot;#2CA02C&quot;, &quot;S&quot; = &quot;#FF
 ggplot(avg_CNS_year_long[avg_CNS_year_long$Element %in% c(&quot;N&quot;, &quot;S&quot;), ], 
        aes(x = year, y = Value, fill = Element)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, color = &quot;white&quot;, width = 0.7) +
-  ggtitle(&quot;Average Concentrations of N and S Over Years&quot;) +
+  ggtitle(&quot;Average N and S Concentration: 2018 v. 2019&quot;) +
   ylab(&quot;Concentration&quot;) +
   xlab(&quot;Year&quot;) +
   scale_fill_manual(values = my_colors, name = &quot;Element&quot;) +
@@ -937,9 +1074,48 @@ ggplot(avg_CNS_year_long[avg_CNS_year_long$Element %in% c(&quot;N&quot;, &quot;S
     legend.text = element_text(size = 10),
     plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
   )</code></pre>
-<p><img src="figure/first_analysis.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
-&gt; A closer look at N and S concentration in Everiam plant tissue in
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-5-1">
+Past versions of unnamed-chunk-5-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-5-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/docs/figure/first_analysis.Rmd/unnamed-chunk-5-1.png" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote>
+<p>A closer look at N and S concentration in Everniam plant tissue in
 2018 and 2019</p>
+</blockquote>
 <pre class="r"><code># Load libraries
 library(ggplot2)
 library(dplyr)
@@ -958,7 +1134,7 @@ N_S_data$month &lt;- as.numeric(N_S_data$month)
 ggplot(data = N_S_data, aes(x = month)) +
   geom_line(aes(y = N_Concentration, color = &quot;N&quot;), size = 1) +
   geom_line(aes(y = S_Concentration, color = &quot;S&quot;), size = 1) +
-  ggtitle(&quot;Average Concentrations of N and S over summer of 2018&quot;) +
+  ggtitle(&quot;Average N and S Concentration: Summer 2018&quot;) +
   ylab(&quot;Concentration (mg/g)&quot;) +
   xlab(&quot;Month&quot;) +
   scale_color_manual(name = &quot;Element&quot;, values = c(N = &quot;#2CA02C&quot;, S = &quot;#FF7F0E&quot;)) +  # Set custom colors
@@ -971,9 +1147,48 @@ ggplot(data = N_S_data, aes(x = month)) +
     axis.line = element_line(color = &quot;black&quot;),
     plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
   )</code></pre>
-<p><img src="figure/first_analysis.Rmd/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
-&gt; Average concentrations of N and S found in everiam plant tissue at
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-6-1">
+Past versions of unnamed-chunk-6-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-6-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f0b777e7a49c9ebd72d702bbd1dbb02daad22ecb/docs/figure/first_analysis.Rmd/unnamed-chunk-6-1.png" target="_blank">f0b777e</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-05-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote>
+<p>Average concentrations of N and S found in everiam plant tissue at
 one site (Kearl) pver the summer of 2018.</p>
+</blockquote>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1001,23 +1216,22 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] tidyr_1.3.1     dplyr_1.1.4     ggplot2_3.5.1   workflowr_1.7.1
+[1] tidyr_1.3.1   dplyr_1.1.4   ggplot2_3.5.1
 
 loaded via a namespace (and not attached):
- [1] sass_0.4.8        utf8_1.2.4        generics_0.1.3    stringi_1.8.3    
- [5] digest_0.6.34     magrittr_2.0.3    evaluate_0.23     grid_4.3.2       
- [9] fastmap_1.1.1     rprojroot_2.0.4   jsonlite_1.8.8    processx_3.8.3   
-[13] whisker_0.4.1     ps_1.7.6          promises_1.2.1    httr_1.4.7       
-[17] purrr_1.0.2       fansi_1.0.6       scales_1.3.0      jquerylib_0.1.4  
-[21] cli_3.6.2         rlang_1.1.3       crayon_1.5.2      munsell_0.5.0    
-[25] withr_3.0.0       cachem_1.0.8      yaml_2.3.8        tools_4.3.2      
-[29] colorspace_2.1-0  httpuv_1.6.14     vctrs_0.6.5       R6_2.5.1         
-[33] lifecycle_1.0.4   git2r_0.33.0      stringr_1.5.1     fs_1.6.3         
-[37] pkgconfig_2.0.3   callr_3.7.3       pillar_1.9.0      bslib_0.6.1      
-[41] later_1.3.2       gtable_0.3.4      glue_1.7.0        Rcpp_1.0.12      
-[45] xfun_0.42         tibble_3.2.1      tidyselect_1.2.0  highr_0.10       
-[49] rstudioapi_0.15.0 knitr_1.45        farver_2.1.1      htmltools_0.5.7  
-[53] rmarkdown_2.25    labeling_0.4.3    compiler_4.3.2    getPass_0.2-4    </code></pre>
+ [1] gtable_0.3.4      jsonlite_1.8.8    crayon_1.5.2      compiler_4.3.2   
+ [5] highr_0.10        promises_1.2.1    tidyselect_1.2.0  Rcpp_1.0.12      
+ [9] stringr_1.5.1     git2r_0.33.0      later_1.3.2       jquerylib_0.1.4  
+[13] scales_1.3.0      yaml_2.3.8        fastmap_1.1.1     R6_2.5.1         
+[17] labeling_0.4.3    generics_0.1.3    workflowr_1.7.1   knitr_1.45       
+[21] tibble_3.2.1      munsell_0.5.0     rprojroot_2.0.4   bslib_0.6.1      
+[25] pillar_1.9.0      rlang_1.1.3       utf8_1.2.4        cachem_1.0.8     
+[29] stringi_1.8.3     httpuv_1.6.14     xfun_0.42         fs_1.6.3         
+[33] sass_0.4.8        cli_3.6.2         withr_3.0.0       magrittr_2.0.3   
+[37] digest_0.6.34     grid_4.3.2        rstudioapi_0.15.0 lifecycle_1.0.4  
+[41] vctrs_0.6.5       evaluate_0.23     glue_1.7.0        farver_2.1.1     
+[45] whisker_0.4.1     colorspace_2.1-0  fansi_1.0.6       purrr_1.0.2      
+[49] rmarkdown_2.25    tools_4.3.2       pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
 </div>
 </div>
 
