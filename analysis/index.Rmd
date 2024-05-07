@@ -14,7 +14,7 @@ I am in the process of honing in on my research question and designing my thesis
 
 <img src="assets/research_timeline.png" alt="timeline chart created" width="700" height="500">
 
-Learn more about me [here!](https://github.com/iduggan/demo/docs/about.html)
+Learn more about me [here!](https://iduggan.github.io/demo/about.html)
 
-Follow along with my progress in working with R [here.](https://github.com/iduggan/demo/docs/first_analysis.html)
+Follow along with my progress in working with R [here.](https://iduggan.github.io/demo/first_analysis.html)
 
