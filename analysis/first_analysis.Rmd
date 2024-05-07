@@ -1,21 +1,18 @@
 ---
-title: "first_analysis"
+title: "Data Analysis Practice"
 output: html_document
 date: "2024-02-22"
 ---
 
-## Sample Data Set: 
-> Average temperatures in Pennsylvania (by year) over the past 100 years:
+> While completing my Masters at Villanova, I will be working in the R.K. Wieder lab on research related to greenhouse gas (GHG) emissions from oil sands development in Alberta, Canada, and their reflection in the surrounding environment of peatland habitat. As of now, in my first semester at Villanova, I don't have data of my own. To create these charts I am using randomized data and data from previous years to showcase my progress with R and practice making figures for my future research!
 
-# Generate random numeric data
+## Randomized Data Set: 
+
 ```{r}
 numeric_data <- data.frame(
   Year = 1924:2024,
   Temperature = runif(101, min = 40, max = 80) # Generates 101 random numbers between 40 and 80
 )
-
-# Display the entire dataset as a table
-print(numeric_data)
 
 write.csv(numeric_data, file = "numeric_data.csv", row.names = FALSE)
 
@@ -38,4 +35,185 @@ barplot(last_10_years$Temperature,
         cex.names = 0.6) # Adjust font size of year labels
 
 ```
+> Data within this figure is randomized and **not accurate** to actual annual temperatures in Pennsylvania, practice making bar charts
 
+##The following graphs are using previous years of peatland data
+
+```{r}
+
+# Load libraries
+library(ggplot2)
+library(dplyr)
+
+# Create data frame for Carbon concentration in 2018
+Carbon_2018_data <- data.frame(
+  month = c("6", "7", "8"),
+  Concentration = c(444.7, 531.9, 450.6)
+)
+
+# Convert 'month' column to numeric
+Carbon_2018_data$month <- as.numeric(Carbon_2018_data$month)
+
+# Plot a line graph
+ggplot(data = Carbon_2018_data, aes(x = month, y = Concentration)) +
+  geom_line(color = "#1F77B4", size = 1) +  # Add a line
+  geom_point(color = "#1F77B4", size = 3) +  # Add points
+  ggtitle("Carbon (C) Concentration in Everiam Plant Tissue in the Summer of 2018") +
+  ylab("C Concentration (mg/g)") +
+  xlab("Month") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black"),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
+  )
+
+```
+
+>Chart displays concentrations of C found in everiam plant tissue at one site (Kearl) over 3 months in the summer of 2018.
+
+##Average C Concentration in 2018 and 2019; Everiam Plant Tissue, Kearl site
+```{r}
+avg_c_year <- data.frame(
+  average = c(442.4, 436),
+  year = c("2018", "2019")
+)
+
+# Load libraries
+library(ggplot2)
+
+# Create bar graph with modified aesthetic
+ggplot(data = avg_c_year, aes(x = year, y = average, fill = year)) + 
+  geom_bar(stat = "identity", color = "white", width = 0.5) +  # Adjust width and remove outline
+  ggtitle("Average Carbon (C) Concentration in Everiam Plant Tissue Across Five Plots") +
+  ylab("C Concentration (mg/g)") +
+  xlab("Year") +
+  scale_fill_manual(values = c("#1F77B4", "#1F77B4")) +  # Set bars to the same blue color
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black"),
+    legend.position = "none",
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
+  )
+
+
+```
+
+> Comparing average concentrations of carbon found in everiam plant tissue at the same site (Kearl) in 2018 versus 2019.
+
+```{r}
+
+# Load libraries
+library(ggplot2)
+library(tidyr)
+
+# Create the data frame with concentrations
+avg_CNS_year <- data.frame(
+  C = c(442.3, 436.0),
+  N = c(8.37, 7.2),
+  S = c(1.5, 1.9),
+  year = c("2018", "2019")
+)
+
+# Reshape data from wide to long format
+avg_CNS_year_long <- pivot_longer(avg_CNS_year, cols = c(C, N, S), names_to = "Element", values_to = "Value")
+
+# Create bar graph with modern aesthetic
+ggplot(avg_CNS_year_long, aes(x = year, y = Value, fill = Element)) +
+  geom_bar(stat = "identity", position = "dodge", color = "white", width = 0.7) +
+  labs(title = "Average Concentrations of C, N, and S Over Years",
+       x = "Year",
+       y = "Concentration (mg/g)") +
+  scale_fill_manual(values = c("C" = "#1F77B4", "N" = "#2CA02C", "S" = "#FF7F0E"),
+                    name = "Element") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black"),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 10),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
+  )
+
+
+```
+> Average concentrations of C, N, and S in Everiam plant tissue in Kearl Canada in 2018 and 2019
+
+```{r}
+
+# Load libraries
+library(ggplot2)
+
+# Create a custom color palette
+my_colors <- c("N" = "#2CA02C", "S" = "#FF7F0E")
+
+# Create bar graph with modern aesthetic
+ggplot(avg_CNS_year_long[avg_CNS_year_long$Element %in% c("N", "S"), ], 
+       aes(x = year, y = Value, fill = Element)) +
+  geom_bar(stat = "identity", position = "dodge", color = "white", width = 0.7) +
+  ggtitle("Average Concentrations of N and S Over Years") +
+  ylab("Concentration") +
+  xlab("Year") +
+  scale_fill_manual(values = my_colors, name = "Element") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black"),
+    legend.position = "top",
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 10),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
+  )
+
+```
+> A closer look at N and S concentration in Everiam plant tissue in 2018 and 2019
+
+```{r}
+# Load libraries
+library(ggplot2)
+library(dplyr)
+
+# Create data frame for N and S concentrations
+N_S_data <- data.frame(
+  month = c("6", "7", "8"),
+  N_Concentration = c(8.37, 7.2, 6.5),
+  S_Concentration = c(1.5, 1.9, 2.2)
+)
+
+# Convert 'month' column to numeric
+N_S_data$month <- as.numeric(N_S_data$month)
+
+# Plot a line graph with a similar aesthetic
+ggplot(data = N_S_data, aes(x = month)) +
+  geom_line(aes(y = N_Concentration, color = "N"), size = 1) +
+  geom_line(aes(y = S_Concentration, color = "S"), size = 1) +
+  ggtitle("Average Concentrations of N and S over summer of 2018") +
+  ylab("Concentration (mg/g)") +
+  xlab("Month") +
+  scale_color_manual(name = "Element", values = c(N = "#2CA02C", S = "#FF7F0E")) +  # Set custom colors
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black"),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
+  )
+
+```
+> Average concentrations of N and S found in everiam plant tissue at one site (Kearl) pver the summer of 2018.

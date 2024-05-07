@@ -5,7 +5,7 @@ navbar:
   left:
   - text: Home
     href: index.html
-  - text: Fake Data
+  - text: Practice Charts
     href: first_analysis.html
   - text: About
     href: about.html

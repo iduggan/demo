@@ -8,8 +8,13 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website!
+My name is Isabella Duggan and I am currently working on my Masters of Science in Biology at Villanova University. Follow along as I will be working in the [R.K. Wieder lab](https://rwieder.clasit.org/research/), studying the impacts of oil sands development on peatland bogs in Alberta, Canada, and posting updates here.
 
-Here I will post updates on my research as I progress through my masters program.
+I am in the process of honing in on my research question and designing my thesis proposal. Below is my current research timeline:
 
-Click on this [](first-analysis.html) to see my results.
+<img src="assets/research_timeline.png" alt="timeline chart created" width="700" height="500">
+
+Learn more about me [here!](https://github.com/iduggan/demo/docs/about.html)
+
+Follow along with my progress in working with R [here.](https://github.com/iduggan/demo/docs/first_analysis.html)
+

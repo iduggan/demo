@@ -258,7 +258,7 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="first_analysis.html">Fake Data</a>
+  <a href="first_analysis.html">Practice Charts</a>
 </li>
 <li>
   <a href="about.html">About</a>
@@ -313,7 +313,7 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-02-26
+<strong>Last updated:</strong> 2024-05-07
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -363,15 +363,15 @@ HTML.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotree80305bbcc5fedf1d3c912fb906b86dbf699ee597targetblank80305bba">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreef05ca00b42b1ffb727066293cce713c6fce51c6ftargetblankf05ca00a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/iduggan/demo/tree/80305bbcc5fedf1d3c912fb906b86dbf699ee597" target="_blank">80305bb</a>
+<a href="https://github.com/iduggan/demo/tree/f05ca00b42b1ffb727066293cce713c6fce51c6f" target="_blank">f05ca00</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotree80305bbcc5fedf1d3c912fb906b86dbf699ee597targetblank80305bba"
+id="strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreef05ca00b42b1ffb727066293cce713c6fce51c6ftargetblankf05ca00a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -381,7 +381,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/iduggan/demo/tree/80305bbcc5fedf1d3c912fb906b86dbf699ee597" target="_blank">80305bb</a>.
+<a href="https://github.com/iduggan/demo/tree/f05ca00b42b1ffb727066293cce713c6fce51c6f" target="_blank">f05ca00</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -396,13 +396,26 @@ were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .RData
+    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
+Untracked files:
+    Untracked:  analysis/carbon_2018_data.csv
+    Untracked:  output/averagebyyear.png
+    Untracked:  output/carbonconcentration2018.png
+
 Unstaged changes:
     Modified:   analysis/_site.yml
+    Modified:   analysis/about.Rmd
+    Modified:   analysis/first_analysis.Rmd
     Modified:   analysis/index.Rmd
+    Modified:   analysis/last_10_years.csv
+    Modified:   analysis/numeric_data.csv
+
+Staged changes:
+    Modified:   analysis/about.Rmd
+    Modified:   analysis/first_analysis.Rmd
 
 </code></pre>
 <p>
@@ -447,6 +460,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/iduggan/demo/blob/f858f1dc169713d59cb3ad812a982b28e4f4040e/analysis/index.Rmd" target="_blank">f858f1d</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-02-26
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/iduggan/demo/f858f1dc169713d59cb3ad812a982b28e4f4040e/docs/index.html" target="_blank">f858f1d</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-02-26
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -556,11 +603,18 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Welcome to my research website!</p>
-<p>Here I will post updates on my research as I progress through my
-masters program.</p>
-<p>Click on this <a href="first-analysis.html"></a> to see my
-results.</p>
+<p>My name is Isabella Duggan and I am currently working on my Masters
+of Science in Biology at Villanova University. Follow along as I will be
+working in the <a href="https://rwieder.clasit.org/research/">R.K.
+Wieder lab</a>, studying the impacts of oil sands development on
+peatland bogs in Alberta, Canada, and posting updates here.</p>
+<p>I am in the process of honing in on my research question and
+designing my thesis proposal. Below is my current research timeline:</p>
+<p><img src="assets/research_timeline.png" alt="timeline chart created" width="700" height="500"></p>
+<p>Learn more about me <a
+href="https://github.com/iduggan/demo/docs/about.html">here!</a></p>
+<p>Follow along with my progress in working with R <a
+href="https://github.com/iduggan/demo/docs/first_analysis.html">here.</a></p>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using

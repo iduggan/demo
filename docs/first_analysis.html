@@ -12,7 +12,7 @@
 
 <meta name="date" content="2024-02-22" />
 
-<title>first_analysis</title>
+<title>Data Analysis Practice</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -335,7 +335,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="first_analysis.html">Fake Data</a>
+  <a href="first_analysis.html">Practice Charts</a>
 </li>
 <li>
   <a href="about.html">About</a>
@@ -361,7 +361,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">first_analysis</h1>
+<h1 class="title toc-ignore">Data Analysis Practice</h1>
 <h4 class="date">2024-02-22</h4>
 
 </div>
@@ -370,7 +370,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -381,8 +381,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -391,13 +391,13 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2024-02-26
+<strong>Last updated:</strong> 2024-05-07
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>demo/</code> <span
@@ -420,18 +420,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has staged changes. To know which version of the
+R Markdown file created these results, you’ll want to first commit it to
+the Git repo. If you’re still working on the analysis, you can ignore
+this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -522,15 +525,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreea4bf2079026dedcc68951e9859151d3112a42168targetblanka4bf207a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreef05ca00b42b1ffb727066293cce713c6fce51c6ftargetblankf05ca00a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/iduggan/demo/tree/a4bf2079026dedcc68951e9859151d3112a42168" target="_blank">a4bf207</a>
+<a href="https://github.com/iduggan/demo/tree/f05ca00b42b1ffb727066293cce713c6fce51c6f" target="_blank">f05ca00</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreea4bf2079026dedcc68951e9859151d3112a42168targetblanka4bf207a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomiduggandemotreef05ca00b42b1ffb727066293cce713c6fce51c6ftargetblankf05ca00a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -540,7 +543,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/iduggan/demo/tree/a4bf2079026dedcc68951e9859151d3112a42168" target="_blank">a4bf207</a>.
+<a href="https://github.com/iduggan/demo/tree/f05ca00b42b1ffb727066293cce713c6fce51c6f" target="_blank">f05ca00</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -555,12 +558,26 @@ were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .RData
+    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
+Untracked files:
+    Untracked:  analysis/carbon_2018_data.csv
+    Untracked:  output/averagebyyear.png
+    Untracked:  output/carbonconcentration2018.png
+
 Unstaged changes:
+    Modified:   analysis/_site.yml
+    Modified:   analysis/about.Rmd
+    Modified:   analysis/first_analysis.Rmd
     Modified:   analysis/index.Rmd
+    Modified:   analysis/last_10_years.csv
+    Modified:   analysis/numeric_data.csv
+
+Staged changes:
+    Modified:   analysis/about.Rmd
+    Modified:   analysis/first_analysis.Rmd
 
 </code></pre>
 <p>
@@ -606,6 +623,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/iduggan/demo/f858f1dc169713d59cb3ad812a982b28e4f4040e/docs/first_analysis.html" target="_blank">f858f1d</a>
+</td>
+<td>
+iduggan
+</td>
+<td>
+2024-02-26
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -681,125 +715,24 @@ push to git
 </div>
 </div>
 </div>
-<div id="sample-data-set" class="section level2">
-<h2>Sample Data Set:</h2>
 <blockquote>
-<p>Average temperatures in Pennsylvania (by year) over the past 100
-years:</p>
+<p>While completing my Masters at Villanova, I will be working in the
+R.K. Wieder lab on research related to greenhouse gas (GHG) emissions
+from oil sands development in Alberta, Canada, and their reflection in
+the surrounding environment of peatland habitat. As of now, in my first
+semester at Villanova, I don’t have data of my own. To create these
+charts I am using randomized data and data from previous years to
+showcase my progress with R and practice making figures for my future
+research!</p>
 </blockquote>
-</div>
-<div id="generate-random-numeric-data" class="section level1">
-<h1>Generate random numeric data</h1>
+<div id="randomized-data-set" class="section level2">
+<h2>Randomized Data Set:</h2>
 <pre class="r"><code>numeric_data &lt;- data.frame(
   Year = 1924:2024,
   Temperature = runif(101, min = 40, max = 80) # Generates 101 random numbers between 40 and 80
 )
 
-# Display the entire dataset as a table
-print(numeric_data)</code></pre>
-<pre><code>    Year Temperature
-1   1924    56.08753
-2   1925    59.53448
-3   1926    75.07696
-4   1927    65.27396
-5   1928    68.41480
-6   1929    68.11095
-7   1930    62.57165
-8   1931    78.15596
-9   1932    56.89326
-10  1933    72.02811
-11  1934    60.77309
-12  1935    52.34302
-13  1936    50.25946
-14  1937    67.01799
-15  1938    55.51543
-16  1939    40.78296
-17  1940    48.02256
-18  1941    40.31076
-19  1942    40.18861
-20  1943    43.43255
-21  1944    52.81917
-22  1945    75.24423
-23  1946    52.88700
-24  1947    50.74974
-25  1948    62.52220
-26  1949    42.24167
-27  1950    43.76234
-28  1951    47.67125
-29  1952    71.13974
-30  1953    71.97837
-31  1954    50.61392
-32  1955    78.57900
-33  1956    68.69755
-34  1957    63.67850
-35  1958    55.80289
-36  1959    77.15861
-37  1960    51.65652
-38  1961    70.02007
-39  1962    68.86868
-40  1963    70.32449
-41  1964    78.67651
-42  1965    76.87896
-43  1966    49.97910
-44  1967    53.91818
-45  1968    65.24998
-46  1969    68.61882
-47  1970    53.29108
-48  1971    63.36748
-49  1972    46.38797
-50  1973    45.75920
-51  1974    55.43815
-52  1975    54.21052
-53  1976    53.86286
-54  1977    73.67080
-55  1978    61.62796
-56  1979    46.85662
-57  1980    78.28530
-58  1981    47.06972
-59  1982    59.62375
-60  1983    69.00437
-61  1984    59.33239
-62  1985    79.77061
-63  1986    66.18310
-64  1987    51.71311
-65  1988    44.63915
-66  1989    69.69212
-67  1990    59.08598
-68  1991    40.54392
-69  1992    40.64075
-70  1993    55.59652
-71  1994    68.41930
-72  1995    73.83719
-73  1996    68.67033
-74  1997    52.99505
-75  1998    67.59847
-76  1999    48.08525
-77  2000    65.09342
-78  2001    49.81975
-79  2002    68.29189
-80  2003    46.01821
-81  2004    49.54133
-82  2005    54.91501
-83  2006    55.00721
-84  2007    40.27195
-85  2008    63.32977
-86  2009    57.34599
-87  2010    42.49168
-88  2011    76.96120
-89  2012    46.98109
-90  2013    49.24002
-91  2014    62.33471
-92  2015    47.47222
-93  2016    75.00449
-94  2017    47.33373
-95  2018    70.66932
-96  2019    46.83602
-97  2020    48.60981
-98  2021    64.10981
-99  2022    59.09856
-100 2023    75.77279
-101 2024    45.16107</code></pre>
-<pre class="r"><code>write.csv(numeric_data, file = &quot;numeric_data.csv&quot;, row.names = FALSE)
+write.csv(numeric_data, file = &quot;numeric_data.csv&quot;, row.names = FALSE)
 
 # Filter data for last 10 years
 last_10_years &lt;- subset(numeric_data, Year &gt;= 2014 &amp; Year &lt;= 2024)
@@ -856,6 +789,191 @@ iduggan
 </table>
 </div>
 </div>
+<blockquote>
+<p>Data within this figure is randomized and <strong>not
+accurate</strong> to actual annual temperatures in Pennsylvania,
+practice making bar charts</p>
+</blockquote>
+<p>##The following graphs are using previous years of peatland data</p>
+<pre class="r"><code># Load libraries
+library(ggplot2)
+library(dplyr)</code></pre>
+<pre><code>
+Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:stats&#39;:
+
+    filter, lag</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code># Create data frame for Carbon concentration in 2018
+Carbon_2018_data &lt;- data.frame(
+  month = c(&quot;6&quot;, &quot;7&quot;, &quot;8&quot;),
+  Concentration = c(444.7, 531.9, 450.6)
+)
+
+# Convert &#39;month&#39; column to numeric
+Carbon_2018_data$month &lt;- as.numeric(Carbon_2018_data$month)
+
+# Plot a line graph
+ggplot(data = Carbon_2018_data, aes(x = month, y = Concentration)) +
+  geom_line(color = &quot;#1F77B4&quot;, size = 1) +  # Add a line
+  geom_point(color = &quot;#1F77B4&quot;, size = 3) +  # Add points
+  ggtitle(&quot;Carbon (C) Concentration in Everiam Plant Tissue in the Summer of 2018&quot;) +
+  ylab(&quot;C Concentration (mg/g)&quot;) +
+  xlab(&quot;Month&quot;) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = &quot;black&quot;),
+    plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
+  )</code></pre>
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.</code></pre>
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<blockquote>
+<p>Chart displays concentrations of C found in everiam plant tissue at
+one site (Kearl) over 3 months in the summer of 2018.</p>
+</blockquote>
+<p>##Average C Concentration in 2018 and 2019; Everiam Plant Tissue,
+Kearl site</p>
+<pre class="r"><code>avg_c_year &lt;- data.frame(
+  average = c(442.4, 436),
+  year = c(&quot;2018&quot;, &quot;2019&quot;)
+)
+
+# Load libraries
+library(ggplot2)
+
+# Create bar graph with modified aesthetic
+ggplot(data = avg_c_year, aes(x = year, y = average, fill = year)) + 
+  geom_bar(stat = &quot;identity&quot;, color = &quot;white&quot;, width = 0.5) +  # Adjust width and remove outline
+  ggtitle(&quot;Average Carbon (C) Concentration in Everiam Plant Tissue Across Five Plots&quot;) +
+  ylab(&quot;C Concentration (mg/g)&quot;) +
+  xlab(&quot;Year&quot;) +
+  scale_fill_manual(values = c(&quot;#1F77B4&quot;, &quot;#1F77B4&quot;)) +  # Set bars to the same blue color
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = &quot;black&quot;),
+    legend.position = &quot;none&quot;,
+    plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
+  )</code></pre>
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<blockquote>
+<p>Comparing average concentrations of carbon found in everiam plant
+tissue at the same site (Kearl) in 2018 versus 2019.</p>
+</blockquote>
+<pre class="r"><code># Load libraries
+library(ggplot2)
+library(tidyr)
+
+# Create the data frame with concentrations
+avg_CNS_year &lt;- data.frame(
+  C = c(442.3, 436.0),
+  N = c(8.37, 7.2),
+  S = c(1.5, 1.9),
+  year = c(&quot;2018&quot;, &quot;2019&quot;)
+)
+
+# Reshape data from wide to long format
+avg_CNS_year_long &lt;- pivot_longer(avg_CNS_year, cols = c(C, N, S), names_to = &quot;Element&quot;, values_to = &quot;Value&quot;)
+
+# Create bar graph with modern aesthetic
+ggplot(avg_CNS_year_long, aes(x = year, y = Value, fill = Element)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, color = &quot;white&quot;, width = 0.7) +
+  labs(title = &quot;Average Concentrations of C, N, and S Over Years&quot;,
+       x = &quot;Year&quot;,
+       y = &quot;Concentration (mg/g)&quot;) +
+  scale_fill_manual(values = c(&quot;C&quot; = &quot;#1F77B4&quot;, &quot;N&quot; = &quot;#2CA02C&quot;, &quot;S&quot; = &quot;#FF7F0E&quot;),
+                    name = &quot;Element&quot;) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = &quot;black&quot;),
+    legend.position = &quot;top&quot;,
+    legend.title = element_text(size = 12, face = &quot;bold&quot;),
+    legend.text = element_text(size = 10),
+    plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
+  )</code></pre>
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
+&gt; Average concentrations of C, N, and S in Everiam plant tissue in
+Kearl Canada in 2018 and 2019</p>
+<pre class="r"><code># Load libraries
+library(ggplot2)
+
+# Create a custom color palette
+my_colors &lt;- c(&quot;N&quot; = &quot;#2CA02C&quot;, &quot;S&quot; = &quot;#FF7F0E&quot;)
+
+# Create bar graph with modern aesthetic
+ggplot(avg_CNS_year_long[avg_CNS_year_long$Element %in% c(&quot;N&quot;, &quot;S&quot;), ], 
+       aes(x = year, y = Value, fill = Element)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, color = &quot;white&quot;, width = 0.7) +
+  ggtitle(&quot;Average Concentrations of N and S Over Years&quot;) +
+  ylab(&quot;Concentration&quot;) +
+  xlab(&quot;Year&quot;) +
+  scale_fill_manual(values = my_colors, name = &quot;Element&quot;) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = &quot;black&quot;),
+    legend.position = &quot;top&quot;,
+    legend.title = element_text(size = 12, face = &quot;bold&quot;),
+    legend.text = element_text(size = 10),
+    plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
+  )</code></pre>
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
+&gt; A closer look at N and S concentration in Everiam plant tissue in
+2018 and 2019</p>
+<pre class="r"><code># Load libraries
+library(ggplot2)
+library(dplyr)
+
+# Create data frame for N and S concentrations
+N_S_data &lt;- data.frame(
+  month = c(&quot;6&quot;, &quot;7&quot;, &quot;8&quot;),
+  N_Concentration = c(8.37, 7.2, 6.5),
+  S_Concentration = c(1.5, 1.9, 2.2)
+)
+
+# Convert &#39;month&#39; column to numeric
+N_S_data$month &lt;- as.numeric(N_S_data$month)
+
+# Plot a line graph with a similar aesthetic
+ggplot(data = N_S_data, aes(x = month)) +
+  geom_line(aes(y = N_Concentration, color = &quot;N&quot;), size = 1) +
+  geom_line(aes(y = S_Concentration, color = &quot;S&quot;), size = 1) +
+  ggtitle(&quot;Average Concentrations of N and S over summer of 2018&quot;) +
+  ylab(&quot;Concentration (mg/g)&quot;) +
+  xlab(&quot;Month&quot;) +
+  scale_color_manual(name = &quot;Element&quot;, values = c(N = &quot;#2CA02C&quot;, S = &quot;#FF7F0E&quot;)) +  # Set custom colors
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = &quot;black&quot;),
+    plot.title = element_text(size = 16, face = &quot;bold&quot;, hjust = 0.5)
+  )</code></pre>
+<p><img src="figure/first_analysis.Rmd/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
+&gt; Average concentrations of N and S found in everiam plant tissue at
+one site (Kearl) pver the summer of 2018.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -883,20 +1001,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.7.1
+[1] tidyr_1.3.1     dplyr_1.1.4     ggplot2_3.5.1   workflowr_1.7.1
 
 loaded via a namespace (and not attached):
- [1] jsonlite_1.8.8    compiler_4.3.2    highr_0.10        promises_1.2.1   
- [5] Rcpp_1.0.12       stringr_1.5.1     git2r_0.33.0      callr_3.7.3      
- [9] later_1.3.2       jquerylib_0.1.4   yaml_2.3.8        fastmap_1.1.1    
-[13] R6_2.5.1          knitr_1.45        tibble_3.2.1      rprojroot_2.0.4  
-[17] bslib_0.6.1       pillar_1.9.0      rlang_1.1.3       utf8_1.2.4       
-[21] cachem_1.0.8      stringi_1.8.3     httpuv_1.6.14     xfun_0.42        
-[25] getPass_0.2-4     fs_1.6.3          sass_0.4.8        cli_3.6.2        
-[29] magrittr_2.0.3    ps_1.7.6          digest_0.6.34     processx_3.8.3   
-[33] rstudioapi_0.15.0 lifecycle_1.0.4   vctrs_0.6.5       evaluate_0.23    
-[37] glue_1.7.0        whisker_0.4.1     fansi_1.0.6       rmarkdown_2.25   
-[41] httr_1.4.7        tools_4.3.2       pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
+ [1] sass_0.4.8        utf8_1.2.4        generics_0.1.3    stringi_1.8.3    
+ [5] digest_0.6.34     magrittr_2.0.3    evaluate_0.23     grid_4.3.2       
+ [9] fastmap_1.1.1     rprojroot_2.0.4   jsonlite_1.8.8    processx_3.8.3   
+[13] whisker_0.4.1     ps_1.7.6          promises_1.2.1    httr_1.4.7       
+[17] purrr_1.0.2       fansi_1.0.6       scales_1.3.0      jquerylib_0.1.4  
+[21] cli_3.6.2         rlang_1.1.3       crayon_1.5.2      munsell_0.5.0    
+[25] withr_3.0.0       cachem_1.0.8      yaml_2.3.8        tools_4.3.2      
+[29] colorspace_2.1-0  httpuv_1.6.14     vctrs_0.6.5       R6_2.5.1         
+[33] lifecycle_1.0.4   git2r_0.33.0      stringr_1.5.1     fs_1.6.3         
+[37] pkgconfig_2.0.3   callr_3.7.3       pillar_1.9.0      bslib_0.6.1      
+[41] later_1.3.2       gtable_0.3.4      glue_1.7.0        Rcpp_1.0.12      
+[45] xfun_0.42         tibble_3.2.1      tidyselect_1.2.0  highr_0.10       
+[49] rstudioapi_0.15.0 knitr_1.45        farver_2.1.1      htmltools_0.5.7  
+[53] rmarkdown_2.25    labeling_0.4.3    compiler_4.3.2    getPass_0.2-4    </code></pre>
 </div>
 </div>
 
